@@ -224,6 +224,10 @@ void set_allocation_pointers(GOptions *gopts) {
         if (strncmp(gopts->allocator_name, "compact", strlen("compact")) == 0) {
                 gopts->use_compact_allocation = 1;
         }
+        if (strncmp(gopts->allocator_name, "mmtk", strlen("mmtk")) == 0) {
+                acdc_alloc = mmtk_malloc;
+                acdc_free = mmtk_free;
+        }
 }
 
 static void print_params(GOptions *gopts) {
