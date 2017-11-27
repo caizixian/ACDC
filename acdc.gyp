@@ -28,6 +28,7 @@
             'include_dirs': [
                 'src',
             ],
+            'libraries': ['allocators/libmmtk.so'],
             'sources': [
                 'src/acdc.c',
                 'src/lifetime-class.c',
