@@ -17,8 +17,8 @@
 #include "proc-status.h"
 #include "alloc/nulloc.h"
 
-void mmtk_free(void *ptr);
-void * mmtk_malloc(size_t size);
+extern void mmtk_free(void *ptr);
+extern void * mmtk_malloc(size_t size);
 
 static void print_usage() {
 	printf("ACDC Benchmark usage:\n"
