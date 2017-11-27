@@ -12,11 +12,11 @@
 	'configurations': {
 		'Debug': {
 			'cflags': ['<@(default_cflags)', '-g', '-O0', '-gdwarf-2'],
-			'ldflags': ['-pthread'],
+            'ldflags': ['-pthread', '-lmmtk', '-Lallocators/'],
 		},
 		'Release': {
 			'cflags': ['<@(default_cflags)', '-O3'],
-			'ldflags': ['-pthread'],
+			'ldflags': ['-pthread', '-lmmtk', '-Lallocators/'],
 		},
 	},
     },
