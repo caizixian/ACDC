@@ -19,6 +19,7 @@
 
 extern void mmtk_free(void *ptr);
 extern void * mmtk_malloc(size_t size);
+extern void gc_init(size_t);
 
 static void print_usage() {
 	printf("ACDC Benchmark usage:\n"
@@ -227,6 +228,7 @@ void set_allocation_pointers(GOptions *gopts) {
         if (strncmp(gopts->allocator_name, "mmtk", strlen("mmtk")) == 0) {
                 acdc_alloc = mmtk_malloc;
                 acdc_free = mmtk_free;
+                gc_init(1024*1024*1024);
         }
 }
 
