@@ -6,6 +6,7 @@ cd $MMTK_PATH
 git pull && ./build.py
 
 cd -
+git pull
 ./build/gyp/gyp --depth=. acdc.gyp
 BUILDTYPE=Release make
 cp $MMTK_PATH/libmmtk.so ./allocators/libmmtk.so
