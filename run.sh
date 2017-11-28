@@ -13,3 +13,5 @@ cp $MMTK_PATH/libmmtkc.so ./allocators/libmmtkc.so
 export LD_LIBRARY_PATH=./allocators
 LD_PRELPOAD=./allocators/libmmtk.so ./out/Release/acdc -P mmtk
 LD_PRELPOAD=./allocators/libmmtkc.so ./out/Release/acdc -P mmtkc
+LD_PRELPOAD=./allocators/libjemalloc.so ./out/Release/acdc -P jemalloc
+LD_PRELPOAD=./allocators/libscalloc.so ./out/Release/acdc -P scalloc
